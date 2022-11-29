@@ -4,12 +4,20 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 // import Tick from './learn/tickClock';
-import {BrowserRouter} from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+import rootReducer from './learn/store/reducer/rootReducer'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const reduxStore = createStore(rootReducer);
+
 root.render(
   <BrowserRouter>
-    <App />
+    <Provider store={reduxStore}>
+      <App />
+    </Provider>
   </BrowserRouter>
 );
 

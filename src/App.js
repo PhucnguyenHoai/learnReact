@@ -29,7 +29,7 @@ function App() {
           <Nav />
           <Switch>
             <Route path="/" exact>
-              <Hello name="React" />
+              <Hello />
             </Route>
             <Route path="/addDelete">
               <FormAction />
